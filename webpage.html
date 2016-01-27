@@ -1,5 +1,33 @@
 <h1>RawGit serves raw files directly from GitHub with proper Content-Type headers.</h1>
 <style>
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-perspective: 400;
+          perspective: 400;
+}
+
+.plane {
+  width: 120px;
+  height: 120px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.plane.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotateX(60deg) rotateZ(-30deg);
+          transform: rotateX(60deg) rotateZ(-30deg);
+  -webkit-animation: rotate 20s infinite linear;
+          animation: rotate 20s infinite linear;
+}
 .circle {
   width: 120px;
   height: 120px;
@@ -60,4 +88,6 @@ h1 {
 }
 </style>
 <div class="ryu"></div>
+<div class="plane">
 <div class="circle"></div>
+</div>
