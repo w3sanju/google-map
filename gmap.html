@@ -274,13 +274,14 @@ var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') 
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
-    	if(i==0)
+    	console.log(i);
+    	if(i==10)
     	{
     		marker_url='http://2.gravatar.com/avatar/5c140bd094f8f927239fa04d27834fdb?s=72&d=blank&r=g';
     	}
     	else
     	{
-    		marker_url='http://www.wescoblog.com/wp-content/uploads/2015/09/pin-footer-wesco.png';
+    		marker_url='http://www.emeventcenter.com/wp-content/uploads/2014/10/map-marker-1.png';
     	}
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
