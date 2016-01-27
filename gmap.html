@@ -67,7 +67,7 @@ var locations = [
 //---------------------------------------------------------------------
 
 var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-	var marker_url = ( is_internetExplorer11 ) ? 'images/google-img/cd-icon-location.png' : 'images/google-img/cd-icon-location.svg';
+	var marker_url = ( is_internetExplorer11 ) ? 'http://www.wescoblog.com/wp-content/uploads/2015/09/pin-footer-wesco.png' : 'images/google-img/cd-icon-location.svg';
 	//define the basic color of your map, plus a value for saturation and brightness
 	var	main_color = '#000000',
 		saturation_value= -20,
@@ -264,6 +264,14 @@ var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') 
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
+    	if(i==2)
+    	{
+    		marker_url='http://2.gravatar.com/avatar/5c140bd094f8f927239fa04d27834fdb?s=72&d=blank&r=g';
+    	}
+    	else
+    	{
+    		
+    	}
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
